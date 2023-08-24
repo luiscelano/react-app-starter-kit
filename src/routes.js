@@ -1,7 +1,7 @@
 import { createBrowserRouter, redirect } from 'react-router-dom';
 import redirectIfAuthenticated from './loaders/redirectIfAuthenticated';
-import Screen1 from './views/app/screen1';
-import Screen2 from './views/app/screen2';
+import Home from './views/app/home';
+import Profile from './views/app/profile';
 import Auth from './views/auth';
 import AppLayout from './components/Layout';
 
@@ -17,15 +17,15 @@ const routes = createBrowserRouter([
     children: [
       {
         path: '',
-        loader: () => redirect('screen1'),
+        loader: () => redirect('home'),
       },
       {
-        path: 'screen1',
-        Component: Screen1,
+        path: 'home',
+        Component: Home,
       },
       {
-        path: 'screen2',
-        Component: Screen2,
+        path: 'profile',
+        Component: Profile,
       },
     ],
   },
