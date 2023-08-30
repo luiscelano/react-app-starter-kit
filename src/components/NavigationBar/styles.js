@@ -5,4 +5,8 @@ export const NavigationBarContainer = styled.div`
   color: white;
   padding: 16px;
   margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;

@@ -1,8 +1,13 @@
 import { createAction, createReducer } from '@reduxjs/toolkit';
+import {
+  counter_decrement,
+  counter_increment,
+  counter_increment_by_amount,
+} from './actionTypes';
 
-const increment = createAction('counter/increment');
-const decrement = createAction('counter/decrement');
-const incrementByAmount = createAction('counter/incrementByAmount');
+const increment = createAction(counter_increment);
+const decrement = createAction(counter_decrement);
+const incrementByAmount = createAction(counter_increment_by_amount);
 
 const initialState = { value: 0 };
 

@@ -1,8 +1,15 @@
 import React from 'react';
 import * as styles from './styles'
+import * as counterSelectors from '../../redux/counter/selectors';
+import { useSelector } from 'react-redux';
 
 function NavigationBar() {
-  return <styles.NavigationBarContainer>Navigation bar</styles.NavigationBarContainer>;
+  const counter = useSelector(counterSelectors.getCounterSelector)
+
+  return <styles.NavigationBarContainer>
+    <span>Navigation bar</span>
+    <span>{`count: ${counter}`}</span>
+  </styles.NavigationBarContainer>;
 }
 
 export default NavigationBar;
