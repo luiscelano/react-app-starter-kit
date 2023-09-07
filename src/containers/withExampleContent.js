@@ -1,16 +1,16 @@
-import { useState } from 'react';
-import withSpinner from './withSpinner';
+import { useState } from 'react'
+import withSpinner from './withSpinner'
 
 const withExampleContent = (Component) => (props) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true)
 
   setTimeout(() => {
-    setIsLoading(false);
-  }, 5000);
+    setIsLoading(false)
+  }, 1000)
 
-  const componentProps = { ...props, example: 'example' };
+  const componentProps = { ...props, example: 'example' }
 
-  return withSpinner(isLoading)(Component)(componentProps);
-};
+  return withSpinner(isLoading)(Component)(componentProps)
+}
 
-export default withExampleContent;
+export default withExampleContent
