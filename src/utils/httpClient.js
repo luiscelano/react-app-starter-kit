@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const httpClient = async ({ method, headers, data, url }) =>
-  await axios({
+  axios({
     method,
     headers,
     data,
