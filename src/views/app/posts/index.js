@@ -3,11 +3,11 @@ import withPosts from '../../../containers/withPosts'
 
 const Posts = (props) => {
   return (
-    <>
+    <ul>
       {Array.from(props.posts || []).map((post, index) => (
-        <div key={index}>{post.description}</div>
+        <li key={index}>{post.description}</li>
       ))}
-    </>
+    </ul>
   )
 }
 
