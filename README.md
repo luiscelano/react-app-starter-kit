@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# react-app-starter-kit
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto contiene todo lo necesario para construir una aplicación con React y Redux.
 
-## Available Scripts
+## Technology Stack
 
-In the project directory, you can run:
+* React 18
+* Redux
+* react-router
+* @redux-toolkit
+* axios
+* styled-components
 
-### `npm start`
+## [React](http://es.react.dev)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Crea interfaces de usuario a partir de componentes. React te permite construir interfaces de usuario a partir de piezas individuales llamadas componentes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+function MyComponent() {
+    return (
+        <div>Hello World!</div>
+    );
+}
+```
 
-### `npm test`
+### Pasar Props a Componentes
+Los componentes de React utilizan props para comunicarse entre sí. Cada componente padre puede enviar información a sus componentes hijos mediante el uso de props.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```jsx
+function MyComponent1() {
+    return (
+        <MyComponent2 message="Hello World!" />
+    );
+}
 
-### `npm run build`
+function MyComponent2(props) {
+    return (
+        <span>{props.message}</span>
+    );
+}
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## [Redux](https://es.redux.js.org)
+Redux es un contenedor predecible del estado de aplicaciones JavaScript.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Te ayuda a escribir aplicaciones que se comportan de manera consistente, corren en distintos ambientes (cliente, servidor y nativo), y son fáciles de probar.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Curso redux](https://app.egghead.io/playlists/fundamentals-of-redux-course-from-dan-abramov-bd5cc867)
 
-### `npm run eject`
+### Por qué usar Redux?
+Redux te permite acceder al estado de una variable y modificar su estado desde cualquier parte.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Ejemplo de jerarquía de componentes
+[hierarchy image here]
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Solución del ejemplo usando Redux
+[redux state management]
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Cómo funciona
+[redux lifecycle]
 
-## Learn More
+## Platform Structure
+Para que los componentes sean reutilizados, no hay necesidad de llamarlos de nuevo, existen formas de hacer que un componente se renderice en múltiples componentes sin volverlos a llamar.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Un buen caso de uso es para la orientación de la aplicación:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### App Layout
+[app layout image here]
 
-### Code Splitting
+### High Order Components
+Son funciones que nos permiten encapsular nuestros componentes asignandole propiedades.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```jsx
+// El componente que recibirá propiedades a base de un encapsulamiento
+function MyComponent(props) {
+    return(
+        <span>{props.message}</span>
+    );
+}
 
-### Analyzing the Bundle Size
+// HOC que encapsula MyComponet asignandole propiedades
+function componentWrapper(Component) {
+    const message = "Hello World!";
+    return <Component message={message} />
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+export default componentWrapper(MyComponent)
+```
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Utilizando HOC para manejo de propiedades
+[hoc image here]
