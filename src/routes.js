@@ -1,10 +1,10 @@
 import { createBrowserRouter, redirect } from 'react-router-dom'
 import redirectIfAuthenticated from './loaders/redirectIfAuthenticated'
-import Home from './views/app/Home'
-import Profile from './views/app/Profile'
+import Home from './views/app/home'
+import Profile from './views/app/profile'
 import Auth from './views/auth'
 import AppLayout from './components/Layout'
-import Posts from './views/app/Posts'
+import Posts from './views/app/posts'
 
 const routes = createBrowserRouter([
   {
