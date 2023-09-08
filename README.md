@@ -4,12 +4,12 @@ Este proyecto contiene todo lo necesario para construir una aplicación con Reac
 
 ## Technology Stack
 
-* React 18
-* Redux
-* react-router
-* @redux-toolkit
-* axios
-* styled-components
+* [React 18](https://es.react.dev)
+* [Redux](https://es.redux.js.org)
+* [react-router](https://reactrouter.com/)
+* [@redux-toolkit](https://redux-toolkit.js.org/)
+* [axios](https://axios-http.com/)
+* [styled-components](https://styled-components.com/)
 
 
 ## Cómo instalarlo
@@ -31,7 +31,7 @@ correr el proyecto(modo producción):
 npm run start:prod
 ```
 
-## [React](http://es.react.dev)
+## React
 
 Crea interfaces de usuario a partir de componentes. React te permite construir interfaces de usuario a partir de piezas individuales llamadas componentes.
 
@@ -60,7 +60,7 @@ function MyComponent2(props) {
 }
 ```
 
-## [Redux](https://es.redux.js.org)
+## Redux
 Redux es un contenedor predecible del estado de aplicaciones JavaScript.
 
 Te ayuda a escribir aplicaciones que se comportan de manera consistente, corren en distintos ambientes (cliente, servidor y nativo), y son fáciles de probar.
