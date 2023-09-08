@@ -11,6 +11,26 @@ Este proyecto contiene todo lo necesario para construir una aplicación con Reac
 * axios
 * styled-components
 
+
+## Cómo instalarlo
+Es necesario tener instalado [node](https://nodejs.org/es/download) primero
+
+abre la consóla de comandos y asegurate de estar en el directorio del proyecto `react-app-starter-kit`
+
+instalar los paquetes:
+```
+npm install
+```
+correr el proyecto(modo desarrollo):
+```
+npm run start:dev
+```
+
+correr el proyecto(modo producción):
+```
+npm run start:prod
+```
+
 ## [React](http://es.react.dev)
 
 Crea interfaces de usuario a partir de componentes. React te permite construir interfaces de usuario a partir de piezas individuales llamadas componentes.
