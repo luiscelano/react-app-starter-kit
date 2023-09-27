@@ -3,7 +3,7 @@ import redirectIfAuthenticated from './loaders/redirectIfAuthenticated'
 import Home from './views/app/home'
 import Profile from './views/app/profile'
 import Auth from './views/auth'
-import AppLayout from './components/Layout'
+import AppLayout from './components/AppLayout'
 import Posts from './views/app/posts'
 
 const routes = createBrowserRouter([

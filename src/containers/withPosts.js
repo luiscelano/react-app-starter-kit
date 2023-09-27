@@ -1,11 +1,9 @@
 import { useEffect, useState, useRef, useCallback } from 'react'
 import withSpinner from './withSpinner'
 import httpClient from '../utils/httpClient'
-import config from '../config'
 import withError from './withError'
 
 const withPosts = (Component) => (props) => {
-  const { API_URL } = config
   const [isLoading, setIsLoading] = useState(false)
   const [errorState, setErrorState] = useState({
     failed: false,
@@ -16,10 +14,7 @@ const withPosts = (Component) => (props) => {
 
   const getPosts = useCallback(async () => {
     try {
-      const response = await httpClient({
-        url: `${API_URL}/posts`,
-        method: 'get'
-      })
+      const response = await httpClient.get('/v2/posts')
       if (response.status === 200) {
         setPosts(response.data.posts)
       }
@@ -27,10 +22,10 @@ const withPosts = (Component) => (props) => {
       console.error('httpClient error:', error)
       setErrorState({
         failed: true,
-        message: (error.response && `${error.message} - ${JSON.stringify(error?.response.data)}`) || error.message
+        message: error.message
       })
     }
-  }, [API_URL])
+  }, [])
 
   useEffect(() => {
     if (postsRef.current) return
