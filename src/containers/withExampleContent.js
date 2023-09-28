@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import withSpinner from './withSpinner'
+import withSpinner from './spinner/withSpinner'
 
 const withExampleContent = (Component) => (props) => {
   const [isLoading, setIsLoading] = useState(true)
