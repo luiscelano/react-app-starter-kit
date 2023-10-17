@@ -1,7 +1,7 @@
 import React from 'react'
 import withPosts from '../../../containers/posts/withPosts'
 
-function Posts(props) {
+const Posts = (props) => {
   return (
     <ul>
       {Array.from(props.posts || []).map((post, index) => (

@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import * as counterActions from '../../../redux/counter/actions'
 import withExampleContent from '../../../containers/withExampleContent'
 
-function Home() {
+const Home = () => {
   const dispatch = useDispatch()
 
   return (

@@ -1,9 +1,9 @@
-import React from "react";
-import NavigationBar from "../NavigationBar";
-import * as styles from "./styles";
-import { Outlet } from "react-router-dom";
+import React from 'react'
+import NavigationBar from '../NavigationBar'
+import * as styles from './styles'
+import { Outlet } from 'react-router-dom'
 
-function AppLayout() {
+const AppLayout = () => {
   return (
     <React.Fragment>
       <NavigationBar />
@@ -11,7 +11,7 @@ function AppLayout() {
         <Outlet />
       </styles.LayoutContainer>
     </React.Fragment>
-  );
+  )
 }
 
-export default AppLayout;
+export default AppLayout
