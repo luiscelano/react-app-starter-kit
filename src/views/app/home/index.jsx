@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import * as counterActions from '../../../redux/counter/actions'
-import withExampleContent from '../../../containers/withExampleContent'
+import * as counterActions from 'src/redux/counter/actions'
+import withExampleContent from 'src/containers/withExampleContent'
 
 const Home = () => {
   const dispatch = useDispatch()

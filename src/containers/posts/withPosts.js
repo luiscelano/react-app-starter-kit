@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef, useCallback } from 'react'
-import withSpinner from '../spinner/withSpinner'
-import httpClient from '../../utils/httpClient'
-import withError from '../error/withError'
+import withSpinner from 'src/containers/spinner/withSpinner'
+import httpClient from 'src/utils/httpClient'
+import withError from 'src/containers/error/withError'
 
 const withPosts = (Component) => (props) => {
   const [isLoading, setIsLoading] = useState(false)

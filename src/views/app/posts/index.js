@@ -1,5 +1,5 @@
 import React from 'react'
-import withPosts from '../../../containers/posts/withPosts'
+import withPosts from 'src/containers/posts/withPosts'
 
 const Posts = (props) => {
   return (

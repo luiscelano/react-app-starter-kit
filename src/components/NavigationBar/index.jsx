@@ -1,6 +1,6 @@
 import React from 'react'
 import * as styles from './styles'
-import * as counterSelectors from '../../redux/counter/selectors'
+import * as counterSelectors from 'src/redux/counter/selectors'
 import { useSelector } from 'react-redux'
 
 const NavigationBar = () => {

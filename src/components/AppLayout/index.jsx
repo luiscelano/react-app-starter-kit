@@ -1,5 +1,5 @@
 import React from 'react'
-import NavigationBar from '../NavigationBar'
+import NavigationBar from 'src/components/NavigationBar'
 import * as styles from './styles'
 import { Outlet } from 'react-router-dom'
 

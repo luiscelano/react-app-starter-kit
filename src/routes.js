@@ -1,18 +1,13 @@
 import { createBrowserRouter, redirect } from 'react-router-dom'
-import redirectIfAuthenticated from './loaders/redirectIfAuthenticated'
-import Home from './views/app/home'
-import Profile from './views/app/profile'
-import Auth from './views/auth'
-import AppLayout from './components/AppLayout'
-import Posts from './views/app/posts'
+import Home from 'src/views/app/home'
+import Profile from 'src/views/app/profile'
+import Auth from 'src/views/auth'
+import AppLayout from 'src/components/AppLayout'
+import Posts from 'src/views/app/posts'
 
 const routes = createBrowserRouter([
   {
     path: '/',
-    loader: () => redirect('/app')
-  },
-  {
-    path: '/app',
     Component: AppLayout,
     children: [
       {
