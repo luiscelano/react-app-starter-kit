@@ -14,7 +14,6 @@ const routes = createBrowserRouter([
   {
     path: '/app',
     Component: AppLayout,
-    loader: redirectIfAuthenticated,
     children: [
       {
         path: '',

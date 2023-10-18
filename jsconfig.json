@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./"
+    },
+    "files.exclude": [
+        "public",
+        "node_modules"
+    ] 
+}
